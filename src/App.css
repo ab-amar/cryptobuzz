@@ -1,38 +1,197 @@
-.App {
+/* Homepage */
+.title{
+  flex:1;
+  color: gold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+.css-1vrqiqu-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root:hover .MuiOutlinedInput-notchedOutline{
+  border-color: rgb(115, 115, 115);
+}
+.css-1vrqiqu-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: rgb(115, 115, 115);
+  border-width: 1px;
+}
+
+.banner{
+  background-image: url(../public/banner1.jpg);
+  background-size: cover;
+}
+
+.bannerContent{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  justify-content: space-around;
+}
+
+.tagLine{
+  display: flex;
+  height: 40%;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carousel{
+  height: 50%;
+  display: flex;
+  align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-height:912px){
+  .alice-carousel{
+    padding-top: 30px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.carouselItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+}
+
+.row{
+  background-color: #16171a;
+  cursor: pointer;
+  font-family: "Montserrat";
+}
+
+.row:hover{
+  background-color: #131111;
+}
+
+.pagination{
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width:412px){
+  .pagination{
+    padding: 20px 0px;
+  }
+  .pagination button{
+    margin: 0 2px ;
+  }
+}
+
+.MuiPaginationItem-root {
+  color: gold !important;
+}
+
+.container{
+  display: flex;
+}
+
+/* Coin Page */
+
+.sidebar{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  border-right: 2px solid grey;
+}
+
+@media only screen and (max-width:992px){
+  .container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar{
+    width: 100%;
+  }
+  
+}
+
+.sidebar_heading{
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+}
+
+.description{
+  width: 100%;
+  font-family: "Montserrat";
+  font-size: 0.85rem;
+  padding: 15px 25px 5px;
+  text-align: justify;
+}
+
+.market_data{
+  align-self: start;
+  padding: 25px;
+  padding-top: 10px;
+  width: 100%;
+}
+@media only screen and (max-width:992px) and (min-width:768px) {
+  .market_data{
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width:768px) and (min-width:576px) {
+  .market_data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.coin_heading{
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+  color: rgb(222, 189, 5);
+}
+
+.coinInfo_container{
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 0px;
+  padding: 40px;
+  padding-bottom: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+@media only screen and (max-width:992px){
+  .coinInfo_container{
+    width: 100%;
+    margin-top: 0;
+    padding: 20px;
+    padding-top: 0;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.select_button{
+  border: 1px solid gold;
+  border-radius: 7px;
+  padding: 10px 20px ;
+  font-family: "Montserrat";
+  cursor: pointer;
+  font-weight: 500;
+  width: 20%;
+  text-align: center;
+}
+@media only screen and (max-width:992px){
+  .select_button{
+    padding: 10px 2px ;
+    font-size: 12px;
+    width: 22%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.selected_button,.select_button:hover{
+  background-color: gold;
+  color: black;
+  font-weight: 900;
 }
